@@ -33,4 +33,6 @@ alias pluginfolder="open ~/Library/Application\ Support/Developer/Shared/Xcode/P
 alias profilefolder="open ~/Library/MobileDevice;"
 alias resetsimulator="xcrun simctl list | grep -oh '[A-Z0-9]\{8\}-[A-Z0-9]\{4\}-[A-Z0-9]\{4\}-[A-Z0-9]\{4\}-[A-Z0-9]\{12\}' | xargs -I{} xcrun simctl erase {};"
 alias chownpermission="sudo chown -R `whoami` /usr/local;"
-alias myaliases="open ~/Alias/alias";
+alias myaliases="open ~/Alias/alials";
+#alias view_a="file *.a; lipo *.a -thin arm64 -output *.a";ar -x *.a; nm *.0 > *.m ; 
+#alias create_framework="lipo -info *.framework;lipo -create a.framework/a b.framework/b -output **path**";
