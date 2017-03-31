@@ -12,7 +12,7 @@ alias aliasmanagergrep="open ~/Library/Containers/Oak.AliasManager/Data/Library/
 alias pluginFolder="open ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins;"
 alias XcodePluginTinker="curl -fsSL https://raw.githubusercontent.com/Bluelich/XcodePluginTinker/master/XcodePluginTinker.sh | sh;"
 alias profilefolder="open /Users/bluelich/Library/MobileDevice/Provisioning\ Profiles/;"
-#alias archiveproject="cd ****path****;pod install;xcodebuild clean -workspace **name**.xcworkspace -scheme **name** -configuration Release;xcodebuild archive -workspace **name**.xcworkspace -scheme **name** -archivePath  ***path.xcarchive***;xcodebuild -exportArchive -archivePath ****path.xcarchive**** -exportPath ***name*** -exportFormat ipa -exportProvisioningProfile \”**profile_name**\”;”
+#alias archiveproject="cd ****path****;pod install;xcodebuild clean -workspace **name**.xcworkspace -scheme **name** -configuration Release;xcodebuild archive -workspace **name**.xcworkspace -scheme **name** -archivePath  ***path.xcarchive***;xcodebuild -exportArchive -exportOptionsPlist ***path.plist*** -archivePath **path.xcarchive** -exportPath **folder_path_ipa**;”
 #alias showpeminfo="openssl x509 -in cert.pem -text -noout;
 #openssl x509 -in cert.cer -text -noout;
 #openssl x509 -in cert.crt -text -noout;"
