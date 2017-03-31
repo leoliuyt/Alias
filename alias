@@ -36,3 +36,8 @@ alias chownpermission="sudo chown -R `whoami` /usr/local;"
 alias myaliases="open ~/Alias/alials";
 #alias view_a="file *.a; lipo *.a -thin arm64 -output *.a";ar -x *.a; nm *.0 > *.m ; 
 #alias create_framework="lipo -info *.framework;lipo -create a.framework/a b.framework/b -output **path**";
+
+#美术宝相关alias
+alias meishubao="cd /Users/zhouqiang/Code/meishubao/ArtBox";
+alias meishubaopodinstall="meishubao;pod install --no-repo-update";
+alias meishubaoarchive="meishubaopodinstall;xcodebuild clean -workspace ArtBox.xcworkspace -scheme ArtBox -configuration Release;xcodebuild archive -workspace ArtBox.xcworkspace -scheme ArtBox -archivePath  ~/Desktop/ArtBox.xcarchive;xcodebuild -exportArchive -exportOptionsPlist ~/Code/meishubaoExportOptions.plist -archivePath ~/Desktop/ArtBox.xcarchive -exportPath ~/Desktop/ArtBox_release;"
