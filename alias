@@ -23,6 +23,9 @@ alias profilefolder="open /Users/bluelich/Library/MobileDevice/Provisioning\ Pro
 
 alias showallfiles="defaults write com.apple.finder AppleShowAllFiles -bool true;"
 alias hideallfiles="defaults write com.apple.finder AppleShowAllFiles -bool false;"
+alias anywhere_enable="sudo spctl --master-disable";
+alias anywhere_disable="sudo spctl --master-enable";
+alias anywhere_status="spctl --status";
 alias trustdevicefolder="open /private/var/db/lockdown/;"
 alias clearzshhistory="rm ~/.zsh_history;"
 alias clearbashhistory="history -c;rm ~/.bash_history"
