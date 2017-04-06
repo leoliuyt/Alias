@@ -20,6 +20,9 @@ alias profilefolder="open /Users/bluelich/Library/MobileDevice/Provisioning\ Pro
 #alias Pem->Der="openssl x509 -in cert.crt -outform der -out cert.der;"
 #alias DerToPem="openssl x509 -in cert.crt -inform der -outform pem -out cert.pem"
 #alias signmobileconfig="openssl smime -sign -in udid.mobileconfig -out udidsinged.mobileconfig -signer InnovCertificates.pem -certfile AppleIncRootCertificate.pem -outform der -nodetach;"
+alias man-to-pdf="man -t xcodebuild | pstopdf -i -o xcodebuild.pdf;"
+alias man-preview="man -t xcodebuild | open -f -a Preview";
+alias manfolder="open /Applications/Xcode.app/Contents/Developer/usr/share/man/;"
 
 alias showallfiles="defaults write com.apple.finder AppleShowAllFiles -bool true;"
 alias hideallfiles="defaults write com.apple.finder AppleShowAllFiles -bool false;"
@@ -44,3 +47,4 @@ alias myaliases="open ~/Alias/alials";
 alias meishubao="cd /Users/zhouqiang/Code/meishubao/ArtBox";
 alias meishubaopodinstall="meishubao;pod install --no-repo-update";
 alias meishubaoarchive="meishubaopodinstall;xcodebuild clean -workspace ArtBox.xcworkspace -scheme ArtBox -configuration Release;xcodebuild archive -workspace ArtBox.xcworkspace -scheme ArtBox -archivePath  ~/Desktop/ArtBox.xcarchive;xcodebuild -exportArchive -exportOptionsPlist ~/Code/meishubaoExportOptions.plist -archivePath ~/Desktop/ArtBox.xcarchive -exportPath ~/Desktop/ArtBox_release;"
+alias artstudioarchive="~/Code/ArtStudio/src;xcodebuild clean -workspace ArtStudio.xcworkspace -scheme ArtStudio -configuration Release;xcodebuild archive -workspace ArtStudio.xcworkspace -scheme ArtStudio -archivePath  ~/Desktop/ArtStudio.xcarchive;xcodebuild -exportOptionsPlist ~/Code/ArtStudio/app-store.plist -exportArchive -archivePath ~/Desktop/ArtStudio.xcarchive -exportPath ~/Desktop/ArtStudio_release;"
