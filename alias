@@ -40,11 +40,18 @@ alias profilefolder="open ~/Library/MobileDevice;"
 alias resetsimulator="xcrun simctl list | grep -oh '[A-Z0-9]\{8\}-[A-Z0-9]\{4\}-[A-Z0-9]\{4\}-[A-Z0-9]\{4\}-[A-Z0-9]\{12\}' | xargs -I{} xcrun simctl erase {};"
 alias chownpermission="sudo chown -R `whoami` /usr/local;"
 alias myaliases="open ~/Alias/alials";
-#alias view_a="file *.a; lipo *.a -thin arm64 -output *.a";ar -x *.a; nm *.0 > *.m ; 
+#alias view_a="file *.a; lipo *.a -thin arm64 -output *.a";ar -x *.a; nm *.0 > *.m ;
 #alias create_framework="lipo -info *.framework;lipo -create a.framework/a b.framework/b -output **path**";
 
 #美术宝相关alias
+#美术宝
 alias meishubao="cd /Users/zhouqiang/Code/meishubao/ArtBox";
-alias meishubaopodinstall="meishubao;pod install --no-repo-update";
+alias meishubaopodinstall="meishubao;podinstall";
 alias meishubaoarchive="meishubaopodinstall;xcodebuild clean -workspace ArtBox.xcworkspace -scheme ArtBox -configuration Release;xcodebuild archive -workspace ArtBox.xcworkspace -scheme ArtBox -archivePath  ~/Desktop/ArtBox.xcarchive;xcodebuild -exportArchive -exportOptionsPlist ~/Code/meishubao-adhoc.plist -archivePath ~/Desktop/ArtBox.xcarchive -exportPath ~/Desktop/ArtBox_release;"
-alias artstudioarchive="cd ~/Code/ArtStudio/src;xcodebuild clean -workspace ArtStudio.xcworkspace -scheme ArtStudio -configuration Release;xcodebuild archive -workspace ArtStudio.xcworkspace -scheme ArtStudio -archivePath  ~/Desktop/ArtStudio.xcarchive;xcodebuild -exportOptionsPlist ~/Code/ArtStudio/app-store.plist -exportArchive -archivePath ~/Desktop/ArtStudio.xcarchive -exportPath ~/Desktop/ArtStudio_release;"
+#智慧校园
+alias artstudioarchive_app-store="cd ~/Code/ArtStudio/src;xcodebuild clean -workspace ArtStudio.xcworkspace -scheme ArtStudio -configuration Release;xcodebuild archive -workspace ArtStudio.xcworkspace -scheme ArtStudio -archivePath  ~/Desktop/ArtStudio.xcarchive;xcodebuild -exportOptionsPlist ~/Code/ArtStudio/app-store.plist -exportArchive -archivePath ~/Desktop/ArtStudio.xcarchive -exportPath ~/Desktop/ArtStudio_release;"
+alias artstudioarchive_ad-hoc="cd ~/Code/ArtStudio/src;xcodebuild clean -workspace ArtStudio.xcworkspace -scheme ArtStudio -configuration Release;xcodebuild archive -workspace ArtStudio.xcworkspace -scheme ArtStudio -archivePath  ~/Desktop/ArtStudio.xcarchive;xcodebuild -exportOptionsPlist ~/Code/ArtStudio/ad-hoc.plist -exportArchive -archivePath ~/Desktop/ArtStudio.xcarchive -exportPath ~/Desktop/ArtStudio_release;"
+#艺信iOS版
+alias artchat-ios="cd ~/Code/artchat-ios/src";
+alias artchat-ios-podinstall="artchat-ios;podinstall";
+alias artchat-ios-podupdate="artchat-ios;podupdate";
