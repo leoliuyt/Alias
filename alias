@@ -4,6 +4,7 @@ alias podinstall="pod install --no-repo-update --verbose"
 #alias uninstallhomebrew="/usr/bin/ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)\";"
 #alias installhomebrew="/usr/bin/ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\";"
 alias resetlaunchpad="defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock;"
+alias resetlaunchservices="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user;killall Finder;"
 alias switchtozsh="chsh -s /bin/zsh;"
 alias itunesapppath="open /Users/bluelich/Music/iTunes/iTunes\ Media;"
 alias useproxy="export ALL_PROXY=socks5://127.0.0.1:1080"
@@ -40,6 +41,10 @@ alias profilefolder="open ~/Library/MobileDevice;"
 alias resetsimulator="xcrun simctl list | grep -oh '[A-Z0-9]\{8\}-[A-Z0-9]\{4\}-[A-Z0-9]\{4\}-[A-Z0-9]\{4\}-[A-Z0-9]\{12\}' | xargs -I{} xcrun simctl erase {};"
 alias chownpermission="sudo chown -R `whoami` /usr/local;"
 alias myaliases="open ~/Alias/alials";
+alias sshlocalport="iproxy 2222 22";
+alias sshiphone="ssh -p 2222 root@localhost";
+alias sshiphone2="ssh -lroot 127.0.0.1 -p2222";
+
 #alias view_a="file *.a; lipo *.a -thin arm64 -output *.a";ar -x *.a; nm *.0 > *.m ;
 #alias create_framework="lipo -info *.framework;lipo -create a.framework/a b.framework/b -output **path**";
 
@@ -55,3 +60,4 @@ alias artstudioarchive_ad-hoc="cd ~/Code/ArtStudio/src;xcodebuild clean -workspa
 alias artchat-ios="cd ~/Code/artchat-ios/src";
 alias artchat-ios-podinstall="artchat-ios;podinstall";
 alias artchat-ios-podupdate="artchat-ios;podupdate";
+alias artchatarchive_ad-hoc="artchat-ios-podinstall;xcodebuild clean -workspace ArtChat.xcworkspace -scheme ArtChatTest -configuration Release;xcodebuild archive -workspace ArtChat.xcworkspace -scheme ArtChatTest -archivePath  ~/Desktop/ArtChat.xcarchive;xcodebuild -exportOptionsPlist ~/Code/ArtChat-ad-hoc.plist -exportArchive -archivePath ~/Desktop/ArtChat.xcarchive -exportPath ~/Desktop/ArtChat_release;"
