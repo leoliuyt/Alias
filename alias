@@ -44,7 +44,7 @@ alias myaliases="open ~/Alias/alials";
 alias sshlocalport="iproxy 2222 22";
 alias sshiphone="ssh -p 2222 root@localhost";
 alias sshiphone2="ssh -lroot 127.0.0.1 -p2222";
-
+alias md="macdown";
 #alias view_a="file *.a; lipo *.a -thin arm64 -output *.a";ar -x *.a; nm *.0 > *.m ;
 #alias create_framework="lipo -info *.framework;lipo -create a.framework/a b.framework/b -output **path**";
 
