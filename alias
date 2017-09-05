@@ -6,7 +6,7 @@ alias podinstall="pod install --no-repo-update --verbose"
 alias resetlaunchpad="defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock;"
 alias resetlaunchservices="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user;killall Finder;"
 alias switchtozsh="chsh -s /bin/zsh;"
-alias itunesapppath="open /Users/bluelich/Music/iTunes/iTunes\ Media;"
+alias itunesapppath="open /Users/zhouqiang/Music/iTunes/iTunes\ Media;"
 alias useproxy="export ALL_PROXY=socks5://127.0.0.1:1080"
 alias boostlocalbin="chmod +rw /usr/local/bin;"
 alias aliasmanagergrep="open ~/Library/Containers/Oak.AliasManager/Data/Library/Application\ Support/Oak.AliasManager/aliasmanager_alias;"
@@ -47,6 +47,7 @@ alias sshiphone2="ssh -lroot 127.0.0.1 -p2222";
 alias md="macdown";
 #alias view_a="file *.a; lipo *.a -thin arm64 -output *.a";ar -x *.a; nm *.0 > *.m ;
 #alias create_framework="lipo -info *.framework;lipo -create a.framework/a b.framework/b -output **path**";
+alias jenkinspassword="cat /Users/zhouqiang/.jenkins/secrets/initialAdminPassword"
 
 #美术宝相关alias
 #美术宝
