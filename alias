@@ -5,6 +5,8 @@ alias podinstall="pod install --no-repo-update --verbose"
 #alias installhomebrew="/usr/bin/ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\";"
 alias resetlaunchpad="defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock;"
 alias resetlaunchservices="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user;killall Finder;"
+alias resetsimulator="xcrun simctl list | grep -oh '[A-Z0-9]\{8\}-[A-Z0-9]\{4\}-[A-Z0-9]\{4\}-[A-Z0-9]\{4\}-[A-Z0-9]\{12\}' | xargs -I{} xcrun simctl erase {};"
+alias simulatorTypes="xcrun simctl list devicetypes"
 alias switchtozsh="chsh -s /bin/zsh;"
 alias itunesapppath="open /Users/zhouqiang/Music/iTunes/iTunes\ Media;"
 alias useproxy="export ALL_PROXY=socks5://127.0.0.1:1080"
@@ -38,7 +40,6 @@ alias fixplugin="find ~/Library/Application\ Support/Developer/Shared/Xcode/Plug
 alias plugincachefolder="open ~/Library/Application\ Support/Alcatraz/Plug-ins;"
 alias pluginfolder="open ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins;"
 alias profilefolder="open ~/Library/MobileDevice;"
-alias resetsimulator="xcrun simctl list | grep -oh '[A-Z0-9]\{8\}-[A-Z0-9]\{4\}-[A-Z0-9]\{4\}-[A-Z0-9]\{4\}-[A-Z0-9]\{12\}' | xargs -I{} xcrun simctl erase {};"
 alias chownpermission="sudo chown -R `whoami` /usr/local;"
 alias myaliases="open ~/Alias/alials";
 alias sshlocalport="iproxy 2222 22";
@@ -48,7 +49,7 @@ alias md="macdown";
 #alias view_a="file *.a; lipo *.a -thin arm64 -output *.a";ar -x *.a; nm *.0 > *.m ;
 #alias create_framework="lipo -info *.framework;lipo -create a.framework/a b.framework/b -output **path**";
 alias jenkinspassword="cat /Users/zhouqiang/.jenkins/secrets/initialAdminPassword"
-
+#alias xib_to_nib="find . -name "*.xib" -type f | awk '{sub(/.xib/,"");print}' | xargs -I % ibtool --compile %.nib %.xib";
 #美术宝相关alias
 #美术宝
 alias meishubao="cd /Users/zhouqiang/Code/meishubao/ArtBox";
