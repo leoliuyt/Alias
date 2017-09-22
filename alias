@@ -1,3 +1,5 @@
+alias zshconfig="st ~/.zshrc"
+alias ohmyzsh="open ~/.oh-my-zsh"
 alias podcache="open ~/Library/Caches/CocoaPods/Pods/Release;"
 alias podupdate="pod update --no-repo-update --verbose"
 alias podinstall="pod install --no-repo-update --verbose"
