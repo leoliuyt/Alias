@@ -26,6 +26,10 @@ alias simulatorOpenAppContainer="open \`xcrun simctl get_app_container booted co
 #https://developer.apple.com/documentation/swift/commandline
 alias openSimulator="xcrun simctl launch --console booted com.bluelich.test <YOUR ARGUMENTS.....>"
 alias simulatorAppInfo="xcrun simctl appinfo booted com.bluelich.test"
+alias swift_source="cd ~/GitHub/swift-source"
+alias swift_source_update="swift_source;./swift/utils/update-checkout --clone"
+alias swift_source_build="swift_source;cd swift;utils/build-script --release-debuginfo"
+alias swift_source_docs="swift_source;cd swift/docs;open -a Google\ Chrome _build/html/contents.html"
 
 #alias archiveproject="cd ****path****;pod install;xcodebuild clean -workspace **name**.xcworkspace -scheme **name** -configuration Release;xcodebuild archive -workspace **name**.xcworkspace -scheme **name** -archivePath  ***path.xcarchive***;xcodebuild -exportArchive -exportOptionsPlist ***path.plist*** -archivePath **path.xcarchive** -exportPath **folder_path_ipa**;”
 #alias showpeminfo="openssl x509 -in cert.pem -text -noout;
