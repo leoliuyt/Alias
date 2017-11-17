@@ -12,11 +12,11 @@ alias simulatorTypes="xcrun simctl list devicetypes"
 alias switchtozsh="chsh -s /bin/zsh;"
 alias itunesapppath="open /Users/bluelich/Music/iTunes/iTunes\ Media;"
 alias useproxy="export ALL_PROXY=socks5://127.0.0.1:1080"
-alias useproxy_surge="export ALL_PROXY=socks5://127.0.0.1:6152"
+alias useproxy_surge="export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152"
 alias boostlocalbin="chmod +rw /usr/local/bin;"
 alias aliasmanagergrep="open ~/Library/Containers/Oak.AliasManager/Data/Library/Application\ Support/Oak.AliasManager/aliasmanager_alias;"
 alias pluginFolder="open ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins;"
-alias XcodePluginTinker="curl -fsSL https://raw.githubusercontent.com/Bluelich/XcodePluginTinker/master/XcodePluginTinker.sh | sh;"
+#alias XcodePluginTinker="curl -fsSL https://raw.githubusercontent.com/Bluelich/XcodePluginTinker/master/XcodePluginTinker.sh | sh;"
 alias profilefolder="open /Users/bluelich/Library/MobileDevice/Provisioning\ Profiles/;"
 #booted代表已启动且选中的模拟器 ctrl+c结束录制
 alias simulatorRecoder="xcrun simctl io booted recordVideo --type=mp4 ~/Desktop/test.mp4"
@@ -67,3 +67,8 @@ alias md="macdown";
 #alias create_framework="lipo -info *.framework;lipo -create a.framework/a b.framework/b -output **path**";
 alias jenkinspassword="cat /Users/bluelich/.jenkins/secrets/initialAdminPassword"
 #alias xib_to_nib="find . -name "*.xib" -type f | awk '{sub(/.xib/,"");print}' | xargs -I % ibtool --compile %.nib %.xib";
+#alias showpeminfo="openssl x509 -in cert.pem -text -noout;openssl x509 -in cert.cer -text -noout;openssl x509 -in cert.crt -text -noout;"
+#alias showderinfo="openssl x509 -in certificate.der -inform der -text -noout"
+#alias Pem->Der="openssl x509 -in cert.crt -outform der -out cert.der;"
+#alias DerToPem="openssl x509 -in cert.crt -inform der -outform pem -out cert.pem"
+#alias signmobileconfig="openssl smime -sign -in udid.mobileconfig -out udidsinged.mobileconfig -signer InnovCertificates.pem -certfile AppleIncRootCertificate.pem -outform der -nodetach;"
