@@ -21,7 +21,7 @@ alias profilefolder="open /Users/bluelich/Library/MobileDevice/Provisioning\ Pro
 #booted代表已启动且选中的模拟器 ctrl+c结束录制
 alias simulatorRecoder="xcrun simctl io booted recordVideo --type=mp4 ~/Desktop/test.mp4"
 alias addFileTosimulator="xcrun simctl addmedia booted ~/test.txt"
-alias simulatorOpenURL="xcrun simctl openurl booted http://maps.apple.com/?q=Mexican+Restaurant"
+#alias simulatorOpenURL="xcrun simctl openurl booted http://maps.apple.com/?q=Mexican+Restaurant"
 alias simulatorAppContainer="xcrun simctl get_app_container booted com.bluelich.test"
 alias simulatorOpenAppContainer="open \`xcrun simctl get_app_container booted com.bluelich.test\` -a Finder"
 #https://developer.apple.com/documentation/swift/commandline
