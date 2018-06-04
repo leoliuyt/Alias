@@ -37,6 +37,8 @@ alias swift_source="cd ~/GitHub/swift-source"
 alias swift_source_update="swift_source;./swift/utils/update-checkout --clone"
 alias swift_source_build="swift_source;cd swift;utils/build-script --release-debuginfo"
 alias swift_source_docs="swift_source;cd swift/docs;open -a Google\ Chrome _build/html/contents.html"
+alias profileinfo="security cms -D -i test.mobileprovision"
+alias install_app_to_device="ios-deploy -L -W -r -d -v -b /path/to/test.app"
 
 #alias archiveproject="cd ****path****;pod install;xcodebuild clean -workspace **name**.xcworkspace -scheme **name** -configuration Release;xcodebuild archive -workspace **name**.xcworkspace -scheme **name** -archivePath  ***path.xcarchive***;xcodebuild -exportArchive -exportOptionsPlist ***path.plist*** -archivePath **path.xcarchive** -exportPath **folder_path_ipa**;”
 #alias showpeminfo="openssl x509 -in cert.pem -text -noout;
@@ -69,7 +71,7 @@ alias myaliases="open ~/Alias/alials;"
 alias sshlocalport="iproxy 2222 22;"
 alias sshiphone="ssh -p 2222 root@localhost;"
 alias sshiphone2="ssh -lroot 127.0.0.1 -p2222;"
-alias md="macdown";
+alias md="macdown"
 #alias view_a="file *.a; lipo *.a -thin arm64 -output *.a";ar -x *.a; nm *.0 > *.m ;
 #alias create_framework="lipo -info *.framework;lipo -create a.framework/a b.framework/b -output **path**";
 alias jenkinspassword="cat /Users/`whoami`/.jenkins/secrets/initialAdminPassword"
